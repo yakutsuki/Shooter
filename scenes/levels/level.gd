@@ -8,10 +8,10 @@ func _on_gate_player_entered_gate(body):
 
 
 
-func _on_player_laser():
+func _on_player_laser(pos):
 	var laser = laser_scene.instantiate()
 	# 1. update the laser postion
-	laser.position = $Player.position
+	laser.position = pos
 	# 2. we have move the laser
 	# 3. I want to add the laser instance to a Node2D
 	add_child(laser)
